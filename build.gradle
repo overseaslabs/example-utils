@@ -35,7 +35,7 @@ task sourcesJar(type: Jar) {
 publishing {
     repositories {
         maven {
-            url "s3://overseaslabs-artifacts-pulbic"
+            url "s3://overseaslabs-artifacts-public"
             credentials(AwsCredentials) {
                 accessKey System.env.AWS_ACCESS_KEY ?: AWS_ACCESS_KEY
                 secretKey System.env.AWS_SECRET_KEY ?: AWS_SECRET_KEY
