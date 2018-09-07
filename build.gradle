@@ -16,7 +16,8 @@ dependencies {
     // This dependency is found on compile classpath of this component and consumers.
     compile(
             [group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.6'],
-            [group: 'org.springframework.data', name: 'spring-data-commons', version: '2.0.9.RELEASE']
+            [group: 'org.springframework.data', name: 'spring-data-commons', version: '2.0.9.RELEASE'],
+            [group: 'org.springframework', name: 'spring-web', version: '5.0.8.RELEASE']
     )
 }
 
@@ -46,7 +47,7 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             groupId 'com.overseaslabs.example'
-            version '0.1.0'
+            version '0.2.0'
             artifactId = 'utils'
             from components.java
             artifact sourcesJar
