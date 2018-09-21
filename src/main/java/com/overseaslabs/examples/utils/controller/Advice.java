@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * sending the appropriate HTTP status back to the client
  */
 @ControllerAdvice
-class Advice {
+public class Advice {
     @ResponseBody
     @ExceptionHandler(ResourceConflictException.class)
     @ResponseStatus(HttpStatus.CONFLICT)
