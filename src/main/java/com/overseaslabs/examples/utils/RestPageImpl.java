@@ -9,6 +9,9 @@ import org.springframework.data.domain.PageRequest;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * An implementation of the page with a default constructor
+ */
 @JsonIgnoreProperties(ignoreUnknown = true, value = {"pageable"})
 public class RestPageImpl<T> extends PageImpl<T> {
     private int totalPages;

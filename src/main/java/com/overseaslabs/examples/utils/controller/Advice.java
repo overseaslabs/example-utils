@@ -8,8 +8,12 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+/**
+ * Handles the exceptions defined in the package
+ * sending the appropriate HTTP status back to the client
+ */
 @ControllerAdvice
-public class Advice {
+class Advice {
     @ResponseBody
     @ExceptionHandler(ResourceConflictException.class)
     @ResponseStatus(HttpStatus.CONFLICT)
