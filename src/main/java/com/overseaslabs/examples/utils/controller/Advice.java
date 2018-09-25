@@ -17,14 +17,14 @@ public class Advice {
     @ResponseBody
     @ExceptionHandler(ResourceConflictException.class)
     @ResponseStatus(HttpStatus.CONFLICT)
-    String resourceConflictsHandler(ResourceConflictException e) {
+    public String resourceConflictsHandler(ResourceConflictException e) {
         return e.getMessage();
     }
 
     @ResponseBody
     @ExceptionHandler(ResourceNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    String resourceNotFoundHandler(ResourceNotFoundException e) {
+    public String resourceNotFoundHandler(ResourceNotFoundException e) {
         return e.getMessage();
     }
 }
